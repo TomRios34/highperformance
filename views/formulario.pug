@@ -1,0 +1,65 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='stylesheet' href='imagen.css')
+
+  title Informes/Citas
+
+  
+  
+.container
+  
+  .cabecera
+    header
+      h1
+        a( href='index.html')
+          p &#9889
+          H1 HIGH PERFORMANCE  BODY &amp;BRAIN 
+             br
+             
+            
+  .enlaces
+    nav
+      a(href='Nosotros.html') Nosotros
+      a(href='informesCita.html') &#128210Solicitar Informes/Cita
+      a(href='contacto.html') &#9742 Contacto
+  .principal 
+    
+    .formulario
+      form(action='/informesCita' method='POST')
+        label(for='nombre') Nombre Completo
+        br
+        input#nombre(type='text', placeholder='Ingrese Nombre Completo', name="nombre", value=nombre)
+        br
+        label(for='correo') Correo
+        br
+        input#correo(type='text', placeholder='Ingrese su correo', name="correo", value=correo)
+        br
+        label(for='numero') Telefono de contacto
+        br
+        input#numero(type='number', placeholder='Ingrese numero telefonico', name="numero", value=numero)
+        br
+        label(for='comentarios') Comentarios
+        br
+        textarea#comentarios(placeholder='Solicitud', name="comentarios")
+        br
+        button#enviar.botonEnviar(type='submit' value='enviar') Enviar 
+        br
+        p= JSON.stringify(aviso)
+
+  .anexo
+    aside
+      
+      blockquote
+        | Para mayores informes solicitar una consulta. 
+        br
+        |                     Profesionales en el tema pueden asesorar 
+        br
+        |                      y dise&ntilde;ar planes de entrenamiento personalizados
+  .piePagina
+    footer
+      p
+        a(href='derechosReservados.html')  Derechos Reservados 
+      p
+  

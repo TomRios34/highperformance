@@ -1,0 +1,147 @@
+*{
+        margin: 0%;
+        padding: 0%;
+        box-sizing: border-box;
+}
+
+body{
+        width: 100vw;
+        height: 100vh;
+        background-color: darkolivegreen;
+        
+html{
+    height: 100%;
+    border-style: double;
+    border-radius: 15px;
+}
+}
+    
+      
+    
+
+    .container{
+        display: grid;
+        grid-template-areas: 
+        "header"
+        "nav"
+        "main"
+        "aside"
+        "footer";
+        background-color: darkolivegreen;
+        width: 95%;
+        height: 100%;
+        justify-items: stretch;
+        margin: auto;
+    }
+    .container > div {
+        
+        border: 2px solid darkred;
+    }
+    .container > div h1 a{
+        color: darkgoldenrod;
+        text-decoration: none;
+    }
+
+
+    .container2{
+        display: grid;
+        grid-template-areas: 
+        "header header header"
+        "nav nav nav"
+        "main main main"
+        "main main main"
+        "footer footer footer";
+        background-color: darkolivegreen;
+        width: 95%;
+        height: 100%;
+        justify-items: stretch;
+        align-items: stretch;
+        border-style: double;
+        border-radius: 15px;
+        margin: auto;
+    }
+    .container2 > div {
+        
+        border: 2px solid darkred;
+    }
+
+    .container2 > div h1 a{
+        color: darkgoldenrod;
+        text-decoration: none;
+    }
+
+
+    .cabecera{
+        grid-area: header;   
+    }
+    .enlaces{
+        grid-area: nav; 
+        text-align: right;
+    }
+
+    .enlaces nav a{
+        background-color: darkgoldenrod;
+        color: silver;
+        text-decoration: none;
+    }
+    
+    .principal{
+
+        grid-area: main;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+
+    }
+    .principal p{
+        flex-basis: 80%;
+    }
+    .principal ul{
+        align-self: center;
+    }
+    .principal form input,textarea{
+        width: 100%;
+    }
+    .anexo{
+        grid-area: aside;
+        height: stretch;
+    }
+    .piePagina{
+        grid-area: footer;
+    }
+    .piePagina footer p{
+        align-items: center;
+        text-align: center;
+        color: brown;
+        background-color: gray;
+    }
+
+    /*Estilos para el formulario*/
+     .formulario{
+        background-color: darkgoldenrod;
+        color: darkred; 
+        width: 99%;
+        height:99%;
+        border-radius: 0 0 0 5%;
+    }
+    form{
+        padding-right: 25%;
+        padding-left: 25%;
+        padding-top: 10%;
+    }
+    #enviar{
+        color: darkred;
+        background-color: olive;
+    }
+
+@media screen and (min-width: 601px) {
+    .container{
+        grid-template: 
+        "header header"
+        "nav nav "
+        "aside main"
+        "aside main"
+        "footer footer";
+    }
+    
+} 
